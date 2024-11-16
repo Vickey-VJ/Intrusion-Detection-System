@@ -1,14 +1,15 @@
 import streamlit as st
+import os
 import joblib
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from scipy import stats
 
-# Load the trained models
-random_forest_model = joblib.load(r'model\random_forest.pkl')
-gradient_boosting_model = joblib.load(r'model\gradient_boosting.pkl')
-decision_tree_model = joblib.load(r'model\decision_tree.pkl')
-naive_bayes_model = joblib.load(r'model\naive_bayes.pkl')
+# Load the trained models 
+random_forest_model = joblib.load(os.path.join("model", "random_forest.pkl"))
+gradient_boosting_model = joblib.load(os.path.join("model", "gradient_boosting.pkl"))
+decision_tree_model = joblib.load(os.path.join("model",'decision_tree.pkl'))
+naive_bayes_model = joblib.load(os.path.join("model",'naive_bayes.pkl'))
 
 # Set up the Streamlit app layout
 st.title("Intrusion Detection System Prediction")
