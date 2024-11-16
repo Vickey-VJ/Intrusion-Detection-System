@@ -7,7 +7,7 @@ from scipy import stats
 
 # Load the trained models
 path_rf = os.path.join("model", "random_forest.pkl")
-random_forest_model = joblib.load('path_rf')
+random_forest_model = joblib.load(path_rf)
 gradient_boosting_model = joblib.load(r'.\model\gradient_boosting.pkl')
 decision_tree_model = joblib.load('model\decision_tree.pkl')
 naive_bayes_model = joblib.load('model\naive_bayes.pkl')
