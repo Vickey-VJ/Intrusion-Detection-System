@@ -1,11 +1,13 @@
 import streamlit as st
+import os
 import joblib
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from scipy import stats
 
 # Load the trained models
-random_forest_model = joblib.load(r'.\model\random_forest.pkl')
+path_rf = os.path.join("model", "random_forest.pkl")
+random_forest_model = joblib.load('path_rf')
 gradient_boosting_model = joblib.load(r'.\model\gradient_boosting.pkl')
 decision_tree_model = joblib.load('model\decision_tree.pkl')
 naive_bayes_model = joblib.load('model\naive_bayes.pkl')
