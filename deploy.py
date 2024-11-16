@@ -9,7 +9,7 @@ from scipy import stats
 random_forest_model = joblib.load(os.path.join("model", "random_forest.pkl"))
 gradient_boosting_model = joblib.load(os.path.join("model", "gradient_boosting.pkl"))
 decision_tree_model = joblib.load(os.path.join("model",'decision_tree.pkl'))
-naive_bayes_model = joblib.load(os.path.join("model",'naive_bayes.pkl')
+naive_bayes_model = joblib.load(os.path.join("model",'naive_bayes.pkl'))
 
 # Set up the Streamlit app layout
 st.title("Intrusion Detection System Prediction")
